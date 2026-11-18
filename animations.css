@@ -1,0 +1,1171 @@
+/* ============================================================
+   ANIMATIONS.CSS — Event Management Website
+   Complete keyframes, transitions, and animation utilities
+   ============================================================ */
+
+/* ============================================================
+   1. KEYFRAME DEFINITIONS
+   ============================================================ */
+
+/* fadeIn */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fadeInDown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fadeInLeft */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* fadeInRight */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* scaleIn */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* slideInUp */
+@keyframes slideInUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+/* pulse */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* shimmer — gold shimmer sweep for buttons */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* float — gentle up/down for hero elements */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* spin — continuous rotation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* glow — gold box-shadow pulse */
+@keyframes glow {
+  0%   { box-shadow: 0 0 5px rgba(201, 168, 76, 0.4), 0 0 10px rgba(201, 168, 76, 0.2); }
+  50%  { box-shadow: 0 0 20px rgba(201, 168, 76, 0.8), 0 0 40px rgba(201, 168, 76, 0.4), 0 0 60px rgba(201, 168, 76, 0.2); }
+  100% { box-shadow: 0 0 5px rgba(201, 168, 76, 0.4), 0 0 10px rgba(201, 168, 76, 0.2); }
+}
+
+/* textShimmer — gradient text color shift for headings */
+@keyframes textShimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* bounceIn — spring bounce entry */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.3); }
+  50%  { opacity: 1; transform: scale(1.08); }
+  70%  { transform: scale(0.95); }
+  85%  { transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* counterUp — for stats number animation (triggers via JS changing content) */
+@keyframes counterUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* gradientShift — animated background gradient for hero overlay */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* progressBar — width 0 → 100% */
+@keyframes progressBar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ripple — circular ripple effect on button click */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* notificationSlide — slide in from right */
+@keyframes notificationSlide {
+  from {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* notificationSlideOut — slide out to right */
+@keyframes notificationSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
+
+/* typing — typewriter width expansion */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* caretBlink — blinking cursor for typewriter */
+@keyframes caretBlink {
+  0%, 100% { border-color: #c9a84c; }
+  50%       { border-color: transparent; }
+}
+
+/* skeletonShimmer — loading placeholder wave */
+@keyframes skeletonShimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+/* fadeOut */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* slideDown — for dropdowns */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* navUnderline — growing underline for nav links */
+@keyframes navUnderline {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+
+/* ============================================================
+   2. UTILITY ANIMATION CLASSES
+   ============================================================ */
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s ease forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease forwards;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-counter-up {
+  animation: counterUp 0.6s ease forwards;
+}
+
+
+/* ============================================================
+   3. ANIMATION DELAY CLASSES (staggered animations)
+   ============================================================ */
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* Extended delays for deeply staggered grids */
+.delay-700  { animation-delay: 700ms; }
+.delay-800  { animation-delay: 800ms; }
+.delay-900  { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+
+/* ============================================================
+   4. SCROLL-TRIGGERED ANIMATION CLASSES
+      JS adds .in-view when element enters the viewport
+   ============================================================ */
+
+/* Base — fade up */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* From left */
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* From right */
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale up */
+.scroll-animate-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate-scale.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger helpers for child elements (JS adds nth delays) */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children.in-view > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children.in-view > *:nth-child(1)  { transition-delay: 0ms; }
+.stagger-children.in-view > *:nth-child(2)  { transition-delay: 100ms; }
+.stagger-children.in-view > *:nth-child(3)  { transition-delay: 200ms; }
+.stagger-children.in-view > *:nth-child(4)  { transition-delay: 300ms; }
+.stagger-children.in-view > *:nth-child(5)  { transition-delay: 400ms; }
+.stagger-children.in-view > *:nth-child(6)  { transition-delay: 500ms; }
+
+
+/* ============================================================
+   5. HOVER EFFECT CLASSES
+   ============================================================ */
+
+/* Lift on hover */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Gold glow on hover */
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.6), 0 0 40px rgba(201, 168, 76, 0.3);
+}
+
+/* Scale on hover */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Gold color on hover */
+.hover-gold {
+  transition: color 0.3s ease;
+}
+
+.hover-gold:hover {
+  color: #c9a84c;
+}
+
+
+/* ============================================================
+   6. BUTTON ANIMATIONS
+   ============================================================ */
+
+/* Primary button — shimmer sweep + lift */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: 200% auto;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(201, 168, 76, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+}
+
+/* Secondary button — border glow on hover */
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0 0 2px #c9a84c, 0 0 20px rgba(201, 168, 76, 0.4);
+}
+
+/* Ripple effect container — apply to button */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple .ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* Loading spinner for submit buttons */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.btn-loading .btn-text {
+  opacity: 0;
+}
+
+.btn-loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+
+/* ============================================================
+   7. CARD ANIMATIONS
+   ============================================================ */
+
+/* Service cards */
+.service-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(201, 168, 76, 0.1);
+}
+
+/* Gallery items */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 14, 26, 0.85) 0%,
+    rgba(10, 14, 26, 0.3) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Testimonial cards — fade slide on enter */
+.testimonial-card {
+  animation: fadeInUp 0.6s ease forwards;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Pricing cards — glow border on hover */
+.pricing-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 2px #c9a84c, 0 20px 50px rgba(201, 168, 76, 0.2);
+}
+
+.pricing-card.featured {
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   8. HERO SECTION ANIMATIONS
+   ============================================================ */
+
+.hero-heading {
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-subtext {
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-buttons {
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.hero-scroll-indicator {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.hero-badge {
+  animation: fadeInDown 0.7s ease 0.1s both;
+}
+
+/* Animated gradient overlay for hero background */
+.hero-gradient-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 14, 26, 0.9) 0%,
+    rgba(124, 58, 237, 0.3) 50%,
+    rgba(10, 14, 26, 0.85) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Shimmer text effect for hero headings */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #c9a84c 0%,
+    #d4af37 25%,
+    #fff8e7 50%,
+    #d4af37 75%,
+    #c9a84c 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s linear infinite;
+}
+
+/* Floating decorative elements in hero */
+.hero-deco-1 { animation: float 4s ease-in-out 0s infinite; }
+.hero-deco-2 { animation: float 4s ease-in-out 1s infinite; }
+.hero-deco-3 { animation: float 4s ease-in-out 2s infinite; }
+
+
+/* ============================================================
+   9. NAVBAR ANIMATIONS
+   ============================================================ */
+
+/* Logo hover glow */
+.navbar-logo {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.7));
+  transform: scale(1.03);
+}
+
+/* Nav link underline animation */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a84c, #d4af37);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Navbar scroll shrink (toggled by JS adding .scrolled) */
+.navbar {
+  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile menu slide down */
+.nav-mobile-menu {
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Hamburger to X transition */
+.hamburger-bar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open .hamburger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open .hamburger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ============================================================
+   10. SECTION TRANSITION ANIMATIONS
+   ============================================================ */
+
+/* Section headers fade in up on scroll */
+.section-header {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section-header.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section gold divider line animation */
+.section-divider {
+  width: 0;
+  transition: width 0.8s ease 0.3s;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a84c, #d4af37, #c9a84c);
+}
+
+.section-header.in-view .section-divider {
+  width: 80px;
+}
+
+/* Staggered card grids */
+.cards-grid .card-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cards-grid.in-view .card-item:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0ms; }
+.cards-grid.in-view .card-item:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 100ms; }
+.cards-grid.in-view .card-item:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 200ms; }
+.cards-grid.in-view .card-item:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 300ms; }
+.cards-grid.in-view .card-item:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 400ms; }
+.cards-grid.in-view .card-item:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 500ms; }
+
+
+/* ============================================================
+   11. NOTIFICATION / TOAST ANIMATIONS
+   ============================================================ */
+
+.toast-notification {
+  animation: notificationSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-notification.dismissing {
+  animation: notificationSlideOut 0.35s ease forwards;
+}
+
+/* Progress bar inside toast */
+.toast-progress {
+  height: 3px;
+  background: linear-gradient(90deg, #c9a84c, #d4af37);
+  animation: progressBar 4s linear forwards;
+  border-radius: 0 0 2px 2px;
+}
+
+
+/* ============================================================
+   12. LIGHTBOX ANIMATIONS
+   ============================================================ */
+
+.lightbox-backdrop {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.lightbox-backdrop.closing {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.lightbox-image-wrapper {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+.lightbox-image-wrapper.closing {
+  animation: fadeOut 0.25s ease forwards;
+}
+
+/* Lightbox navigation arrows */
+.lightbox-arrow {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.6;
+}
+
+.lightbox-arrow:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+
+/* ============================================================
+   13. LOADING / SKELETON STATES
+   ============================================================ */
+
+/* Skeleton shimmer placeholder */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 400px 100%;
+  animation: skeletonShimmer 1.4s ease infinite;
+  border-radius: 4px;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  height: 14px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.skeleton-text.short { width: 60%; }
+.skeleton-text.medium { width: 80%; }
+.skeleton-text.full { width: 100%; }
+
+.skeleton-heading {
+  height: 24px;
+  width: 50%;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+/* Loading spinner (standalone) */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(201, 168, 76, 0.2);
+  border-top-color: #c9a84c;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.spinner-sm {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.spinner-lg {
+  width: 56px;
+  height: 56px;
+  border-width: 4px;
+}
+
+/* Page loader overlay */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: #0a0e1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   14. STATS / COUNTER SECTION
+   ============================================================ */
+
+.stat-number {
+  animation: counterUp 0.6s ease forwards;
+}
+
+.stat-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stats-section.in-view .stat-item:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0ms; }
+.stats-section.in-view .stat-item:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 150ms; }
+.stats-section.in-view .stat-item:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 300ms; }
+.stats-section.in-view .stat-item:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 450ms; }
+
+
+/* ============================================================
+   15. PROGRESS BARS
+   ============================================================ */
+
+.progress-bar-track {
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c9a84c, #d4af37);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.progress-bar-fill.animated {
+  animation: progressBar 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+/* ============================================================
+   16. TYPEWRITER EFFECT
+   ============================================================ */
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #c9a84c;
+  animation:
+    typing 3s steps(30, end) forwards,
+    caretBlink 0.75s step-end infinite;
+}
+
+
+/* ============================================================
+   17. FORM ANIMATIONS
+   ============================================================ */
+
+/* Input focus ring animation */
+.form-input {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #c9a84c;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+}
+
+/* Success / error state */
+.form-input.success { border-color: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15); }
+.form-input.error   { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15); }
+
+/* Form label float animation */
+.form-label {
+  transition: transform 0.25s ease, font-size 0.25s ease, color 0.25s ease;
+}
+
+.form-group:focus-within .form-label,
+.form-group.has-value .form-label {
+  transform: translateY(-22px);
+  font-size: 0.75rem;
+  color: #c9a84c;
+}
+
+/* Shake on invalid submit */
+@keyframes shakeX {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-8px); }
+  30%       { transform: translateX(8px); }
+  45%       { transform: translateX(-6px); }
+  60%       { transform: translateX(6px); }
+  75%       { transform: translateX(-4px); }
+  90%       { transform: translateX(4px); }
+}
+
+.form-shake {
+  animation: shakeX 0.5s ease forwards;
+}
+
+/* Success checkmark */
+@keyframes checkmark {
+  0%   { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.checkmark-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: checkmark 0.5s ease 0.2s forwards;
+}
+
+
+/* ============================================================
+   18. SCROLL INDICATOR
+   ============================================================ */
+
+.scroll-indicator-dot {
+  animation: float 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollIndicatorBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(6px); opacity: 0.5; }
+}
+
+.scroll-indicator-arrow {
+  animation: scrollIndicatorBounce 1.5s ease infinite;
+}
+
+
+/* ============================================================
+   19. MODAL ANIMATIONS
+   ============================================================ */
+
+.modal-overlay {
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.modal-overlay.closing {
+  animation: fadeOut 0.25s ease forwards;
+}
+
+.modal-panel {
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.modal-panel.closing {
+  animation: fadeOut 0.2s ease forwards;
+}
+
+
+/* ============================================================
+   20. ACCORDION ANIMATIONS
+   ============================================================ */
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 600px;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(180deg);
+}
+
+
+/* ============================================================
+   21. TAB ANIMATIONS
+   ============================================================ */
+
+.tab-panel {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.tab-panel.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.tab-indicator {
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ============================================================
+   22. BACK-TO-TOP BUTTON
+   ============================================================ */
+
+.back-to-top {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+}
+
+
+/* ============================================================
+   23. PARALLAX HELPER
+   ============================================================ */
+
+.parallax-element {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+
+/* ============================================================
+   24. REDUCED MOTION (Accessibility)
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-animate,
+  .scroll-animate-left,
+  .scroll-animate-right,
+  .scroll-animate-scale,
+  .stagger-children > *,
+  .section-header,
+  .cards-grid .card-item,
+  .stat-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-heading,
+  .hero-subtext,
+  .hero-buttons,
+  .hero-badge {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

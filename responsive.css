@@ -1,0 +1,996 @@
+/* ============================================================
+   responsive.css — Elite Events
+   All media-query overrides. Base styles live in style.css.
+   ============================================================ */
+
+/* ============================================================
+   MOBILE MENU — base state (applies at every width)
+   The JS toggles .active on .nav-menu and .nav-overlay
+   ============================================================ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 6px;
+  gap: 5px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #c9a84c;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav menu — slides in from the right */
+.nav-menu {
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 280px;
+  height: calc(100vh - 70px);
+  background: #0a0e1a;
+  border-left: 1px solid rgba(201, 168, 76, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1050;
+  padding: 20px 0 40px;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+/* Nav links inside the mobile menu */
+.nav-menu .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu .nav-links li a,
+.nav-menu .nav-link {
+  display: block;
+  padding: 15px 30px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease, padding-left 0.2s ease;
+}
+
+.nav-menu .nav-links li a:hover,
+.nav-menu .nav-link:hover {
+  color: #c9a84c;
+  background: rgba(201, 168, 76, 0.07);
+  padding-left: 38px;
+}
+
+/* Get a Quote button inside mobile menu */
+.nav-menu .btn-quote,
+.nav-menu .nav-cta {
+  display: block;
+  margin: 24px 30px 0;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #c9a84c, #d4af37);
+  color: #0a0e1a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  min-height: 44px;
+  line-height: 1.4;
+}
+
+.nav-menu .btn-quote:hover,
+.nav-menu .nav-cta:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Semi-transparent backdrop */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 70px 0 0 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 1040;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+/* Body scroll lock when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ============================================================
+   1. LARGE TABLETS / SMALL DESKTOPS — max-width: 1200px
+   ============================================================ */
+@media (max-width: 1200px) {
+
+  .container {
+    padding: 0 30px;
+  }
+
+  /* Typography scale-down */
+  .hero-title,
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .section-title,
+  .section-heading h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Services: 3-column grid */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* About: tighter column gap */
+  .about-grid,
+  .about-content {
+    gap: 40px;
+  }
+
+  /* Featured events: keep 3 but reduce gap */
+  .featured-grid,
+  .events-grid {
+    gap: 24px;
+  }
+
+  /* Why Choose Us: 3 columns */
+  .why-grid,
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    gap: 20px;
+  }
+
+  /* Team */
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    columns: 3;
+    gap: 16px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    gap: 30px;
+  }
+}
+
+/* ============================================================
+   2. TABLETS — max-width: 992px
+   ============================================================ */
+@media (max-width: 992px) {
+
+  /* ---- NAVBAR ---- */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide the inline desktop nav links */
+  .nav-links,
+  .navbar .nav-links,
+  header .nav-links {
+    display: none;
+  }
+
+  /* Hide the desktop CTA button in the navbar bar itself */
+  .navbar .btn-quote,
+  .navbar .nav-cta,
+  header .btn-quote {
+    display: none;
+  }
+
+  /* ---- HERO ---- */
+  .hero-title,
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle,
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons,
+  .hero-cta {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* ---- FEATURED EVENTS ---- */
+  .featured-grid,
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* ---- SERVICES ---- */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* ---- PACKAGES PREVIEW ---- */
+  .packages-grid,
+  .packages-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Premium card: full width to stand out */
+  .package-card.premium,
+  .pricing-card.featured {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ---- PRICING ---- */
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pricing-card.featured {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ---- ABOUT ---- */
+  .about-grid,
+  .about-content,
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-image,
+  .about-img-wrapper {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .about-image img,
+  .about-img-wrapper img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  /* ---- TEAM ---- */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* ---- WHY CHOOSE US ---- */
+  .why-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* ---- CONTACT ---- */
+  .contact-grid,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info {
+    order: -1;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  /* ---- GALLERY ---- */
+  .gallery-grid {
+    columns: 2;
+    gap: 14px;
+  }
+
+  /* ---- SECTION HEADINGS ---- */
+  .section-title,
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  /* ---- GENERAL SECTION PADDING ---- */
+  section,
+  .section {
+    padding: 80px 0;
+  }
+}
+
+/* ============================================================
+   3. MOBILE LARGE — max-width: 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* ---- NAVBAR ---- */
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar .nav-links,
+  header .nav-links {
+    display: none;
+  }
+
+  .navbar .btn-quote,
+  .navbar .nav-cta,
+  header .btn-quote {
+    display: none;
+  }
+
+  /* ---- HERO ---- */
+  .hero,
+  #home {
+    min-height: 100svh;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-title,
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+  }
+
+  .hero-subtitle,
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge,
+  .hero-tag {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .hero-buttons,
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn,
+  .hero-cta .btn,
+  .hero-buttons a,
+  .hero-cta a {
+    width: 100%;
+    text-align: center;
+    min-height: 44px;
+    padding: 13px 20px;
+  }
+
+  /* ---- FEATURED EVENTS ---- */
+  .featured-grid,
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* ---- SERVICES ---- */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* ---- PACKAGES PREVIEW ---- */
+  .packages-grid,
+  .packages-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .package-card.premium,
+  .pricing-card.featured {
+    grid-column: auto;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* ---- PRICING ---- */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pricing-card.featured {
+    grid-column: auto;
+    transform: none;
+  }
+
+  /* ---- WHY CHOOSE US ---- */
+  .why-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* ---- ABOUT ---- */
+  .about-grid,
+  .about-content,
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-stats,
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* ---- TEAM ---- */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* ---- GALLERY FILTER ---- */
+  .gallery-filter,
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .gallery-filter button,
+  .filter-btn {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    min-height: 36px;
+    white-space: nowrap;
+  }
+
+  /* ---- GALLERY GRID ---- */
+  .gallery-grid {
+    columns: 2;
+    gap: 10px;
+  }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  /* ---- TESTIMONIALS ---- */
+  .testimonials-slider,
+  .testimonial-wrapper {
+    padding: 0 10px;
+  }
+
+  .testimonial-card {
+    padding: 28px 20px;
+  }
+
+  .testimonial-card .quote-icon {
+    font-size: 3rem;
+  }
+
+  .testimonial-nav .arrow,
+  .slider-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
+  /* ---- CONTACT ---- */
+  .contact-grid,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  /* ---- SECTION PADDING ---- */
+  section,
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-title,
+  .section-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle,
+  .section-heading p {
+    font-size: 0.9rem;
+  }
+
+  /* ---- FAQ ---- */
+  .faq-question,
+  .faq-item summary {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+
+  /* ---- MODAL ---- */
+  .modal-content {
+    margin: 10px;
+    padding: 24px 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* ---- BOOKING FORM GRID ---- */
+  .booking-form .form-row,
+  .modal .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ---- BACK TO TOP ---- */
+  #back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================================
+   4. MOBILE SMALL — max-width: 480px
+   ============================================================ */
+@media (max-width: 480px) {
+
+  /* ---- GENERAL ---- */
+  .container {
+    padding: 0 16px;
+  }
+
+  section,
+  .section {
+    padding: 60px 0;
+  }
+
+  /* ---- TYPOGRAPHY ---- */
+  .hero-title,
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .section-title,
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle,
+  .section-heading p {
+    font-size: 0.85rem;
+  }
+
+  /* ---- BUTTONS — touch targets ---- */
+  .btn,
+  button,
+  [role="button"] {
+    min-height: 44px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  /* ---- HERO ---- */
+  .hero,
+  #home {
+    padding: 90px 16px 50px;
+    text-align: center;
+  }
+
+  .hero-title,
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons,
+  .hero-cta {
+    align-items: center;
+  }
+
+  .hero-buttons .btn,
+  .hero-cta .btn,
+  .hero-buttons a,
+  .hero-cta a {
+    width: 100%;
+  }
+
+  /* Hide decorative floating shapes / badges */
+  .hero-shape,
+  .hero-decoration,
+  .floating-badge,
+  .deco-shape {
+    display: none;
+  }
+
+  /* ---- FEATURED EVENTS ---- */
+  .featured-grid,
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- SERVICES ---- */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ---- PACKAGES / PRICING ---- */
+  .packages-grid,
+  .packages-preview-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  /* ---- WHY CHOOSE US ---- */
+  .why-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .why-item,
+  .feature-card {
+    padding: 20px 14px;
+    text-align: center;
+  }
+
+  .why-item .icon,
+  .feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .why-item h3,
+  .feature-card h3 {
+    font-size: 0.9rem;
+  }
+
+  /* ---- ABOUT ---- */
+  .about-stats,
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-item .stat-number {
+    font-size: 2rem;
+  }
+
+  /* ---- TEAM ---- */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .team-card {
+    padding: 16px 10px;
+  }
+
+  .team-card img,
+  .team-photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-card h3 {
+    font-size: 0.9rem;
+  }
+
+  /* ---- GALLERY FILTER ---- */
+  .gallery-filter,
+  .filter-buttons {
+    gap: 6px;
+  }
+
+  .gallery-filter button,
+  .filter-btn {
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+
+  /* ---- GALLERY GRID ---- */
+  .gallery-grid {
+    columns: 2;
+    gap: 8px;
+  }
+
+  /* For very small screens: 1 column */
+  @media (max-width: 360px) {
+    .gallery-grid {
+      columns: 1;
+    }
+  }
+
+  /* ---- TESTIMONIAL ---- */
+  .testimonial-card {
+    padding: 20px 14px;
+  }
+
+  .customer-photo,
+  .testimonial-photo {
+    width: 56px;
+    height: 56px;
+  }
+
+  /* ---- CONTACT FORM ---- */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 16px; /* prevent iOS zoom */
+    padding: 12px 14px;
+    min-height: 44px;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-brand,
+  .footer-col:first-child {
+    text-align: center;
+  }
+
+  .footer-socials,
+  .footer-brand .social-row {
+    justify-content: center;
+  }
+
+  /* ---- MODAL ---- */
+  .modal-content {
+    margin: 6px;
+    padding: 20px 14px;
+    border-radius: 12px;
+  }
+
+  .modal-title,
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+
+  /* ---- NOTIFICATION ---- */
+  #notification,
+  .notification {
+    right: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+    font-size: 0.85rem;
+    padding: 12px 16px;
+  }
+
+  /* Hide purely decorative elements on small screens */
+  .section-deco,
+  .bg-shape,
+  .pattern-overlay,
+  .floating-element {
+    display: none;
+  }
+
+  /* ---- BACK TO TOP ---- */
+  #back-to-top {
+    width: 38px;
+    height: 38px;
+    bottom: 14px;
+    right: 14px;
+    font-size: 0.75rem;
+  }
+
+  /* ---- LIGHTBOX ---- */
+  #lightbox .lightbox-content,
+  .lightbox-modal .lightbox-content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #lightbox .lightbox-close,
+  .lightbox-modal .lightbox-close {
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  #lightbox .lightbox-prev,
+  #lightbox .lightbox-next,
+  .lightbox-modal .lightbox-prev,
+  .lightbox-modal .lightbox-next {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   5. TOUCH DEVICE IMPROVEMENTS
+   Remove hover-only effects that feel broken on touch devices
+   ============================================================ */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Services card: skip hover lift */
+  .service-card:hover,
+  .services-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Gallery: skip hover overlay animation */
+  .gallery-item:hover img {
+    transform: none;
+  }
+
+  .gallery-item:hover .gallery-overlay,
+  .gallery-item:hover .overlay {
+    opacity: 0;
+  }
+
+  /* Team card hover */
+  .team-card:hover {
+    transform: none;
+  }
+
+  /* Feature card hover */
+  .feature-card:hover,
+  .why-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Pricing card hover */
+  .pricing-card:hover:not(.featured) {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Event card hover */
+  .event-card:hover,
+  .featured-card:hover {
+    transform: none;
+  }
+
+  /* Testimonial arrow visible always on touch */
+  .slider-arrow,
+  .testimonial-nav .arrow {
+    opacity: 1;
+  }
+
+  /* Links — no underline-on-hover flicker */
+  a:hover {
+    text-decoration: none;
+  }
+
+  /* Buttons: bigger tap zones */
+  .btn,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Nav links: bigger tap zone */
+  .nav-menu .nav-links li a,
+  .nav-menu .nav-link {
+    padding: 18px 30px;
+  }
+
+  /* Gallery filter buttons: bigger tap zone */
+  .filter-btn,
+  .gallery-filter button {
+    min-height: 40px;
+    padding: 10px 16px;
+  }
+}
+
+/* ============================================================
+   6. UTILITY — smooth scroll (respects prefers-reduced-motion)
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .nav-menu {
+    transition: none;
+  }
+}

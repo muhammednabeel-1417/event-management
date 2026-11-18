@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Élite Events – Premium Event Management Services. Weddings, Corporate Events, Birthday Parties, and more. Making your special moments unforgettable." />
+  <title>✦ Élite Events | Premium Event Management</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Project CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NOTIFICATION TOAST
+  ============================================================ -->
+  <div id="notification" class="notification"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">✦ Élite Events</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home"         class="nav-link active">Home</a></li>
+        <li><a href="#about"        class="nav-link">About Us</a></li>
+        <li><a href="#services"     class="nav-link">Services</a></li>
+        <li><a href="#pricing"      class="nav-link">Events &amp; Pricing</a></li>
+        <li><a href="#gallery"      class="nav-link">Gallery</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact"      class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <button class="btn btn-primary nav-cta" id="navQuoteBtn" onclick="openModal()">
+        <i class="fa-solid fa-wand-sparkles"></i> Get a Quote
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO — #home
+  ============================================================ -->
+  <section id="home" class="hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">✦ Premier Event Management</span>
+      <h1 class="hero-title animate-slide-up">
+        We Make Your<br /><em>Special Moments</em><br />Unforgettable
+      </h1>
+      <p class="hero-sub animate-slide-up delay-1">
+        From intimate gatherings to grand celebrations — we craft bespoke experiences that linger in memory forever. Trust Élite Events to transform your vision into reality.
+      </p>
+      <div class="hero-actions animate-slide-up delay-2">
+        <a href="#services" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-star"></i> Explore Our Services
+        </a>
+        <a href="#gallery" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-images"></i> View Our Gallery
+        </a>
+      </div>
+      <div class="hero-stats animate-fade-in delay-3">
+        <div class="hero-stat"><span class="stat-num">12+</span><span class="stat-label">Years Experience</span></div>
+        <div class="hero-stat"><span class="stat-num">500+</span><span class="stat-label">Events Delivered</span></div>
+        <div class="hero-stat"><span class="stat-num">98%</span><span class="stat-label">Client Satisfaction</span></div>
+        <div class="hero-stat"><span class="stat-num">50+</span><span class="stat-label">Award Wins</span></div>
+      </div>
+    </div>
+    <a href="#featured" class="hero-scroll-down" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       FEATURED EVENTS — #featured
+  ============================================================ -->
+  <section id="featured" class="section featured-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Featured Events</span>
+        <h2 class="section-title">Our Signature <em>Celebrations</em></h2>
+        <p class="section-sub">A glimpse of the extraordinary events we have brought to life for our cherished clients.</p>
+      </div>
+
+      <div class="featured-grid">
+        <!-- Card 1 -->
+        <article class="featured-card">
+          <div class="featured-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Royal Wedding" loading="lazy" />
+            <span class="featured-tag">Wedding</span>
+          </div>
+          <div class="featured-body">
+            <h3>Royal Wedding Extravaganza</h3>
+            <p>A breathtaking 3-day royal-themed wedding celebration for 800 guests at the heritage Lakeview Palace — adorned with 10,000 fresh roses, live orchestra, and bespoke floral chandeliers.</p>
+            <div class="featured-meta">
+              <span><i class="fa-solid fa-users"></i> 800 Guests</span>
+              <span><i class="fa-solid fa-calendar"></i> 3 Days</span>
+              <span><i class="fa-solid fa-location-dot"></i> Lakeview Palace</span>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openModal()">Plan Similar Event</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="featured-card featured-card--highlight">
+          <div class="featured-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Grand Corporate Gala" loading="lazy" />
+            <span class="featured-tag">Corporate</span>
+          </div>
+          <div class="featured-body">
+            <h3>Grand Corporate Gala Night</h3>
+            <p>An elegant black-tie corporate awards gala for a Fortune 500 company — featuring world-class entertainment, custom stage production, 5-star catering, and seamless AV orchestration for 1,200 attendees.</p>
+            <div class="featured-meta">
+              <span><i class="fa-solid fa-users"></i> 1,200 Guests</span>
+              <span><i class="fa-solid fa-calendar"></i> 1 Night</span>
+              <span><i class="fa-solid fa-location-dot"></i> Grand Hyatt</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openModal()">Plan Similar Event</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="featured-card">
+          <div class="featured-img-wrap">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="50th Anniversary" loading="lazy" />
+            <span class="featured-tag">Anniversary</span>
+          </div>
+          <div class="featured-body">
+            <h3>Golden 50th Anniversary</h3>
+            <p>A heartwarming golden jubilee celebration honoring 50 years of love — intimate garden setup with vintage décor, personalised memory wall, surprise video tributes, and a live jazz quartet for 150 guests.</p>
+            <div class="featured-meta">
+              <span><i class="fa-solid fa-users"></i> 150 Guests</span>
+              <span><i class="fa-solid fa-calendar"></i> 1 Day</span>
+              <span><i class="fa-solid fa-location-dot"></i> Rosegarden Estate</span>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openModal()">Plan Similar Event</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PACKAGES PREVIEW — #packages-preview
+  ============================================================ -->
+  <section id="packages-preview" class="section packages-preview-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Packages</span>
+        <h2 class="section-title">Popular <em>Packages</em></h2>
+        <p class="section-sub">Transparent, all-inclusive pricing tailored to every dream and budget.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Basic -->
+        <div class="package-card">
+          <div class="package-header">
+            <i class="fa-solid fa-seedling package-icon"></i>
+            <h3>Basic</h3>
+            <div class="package-price"><span class="currency">₹</span>15,000<span class="price-unit">/event</span></div>
+            <p>Perfect for intimate gatherings up to 100 guests.</p>
+          </div>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Basic Stage Decoration</li>
+            <li><i class="fa-solid fa-check"></i> Balloon &amp; Floral Arrangements</li>
+            <li><i class="fa-solid fa-check"></i> Basic Lighting Setup</li>
+            <li><i class="fa-solid fa-check"></i> Event Coordination (4 hrs)</li>
+            <li><i class="fa-solid fa-check"></i> Photography (1 Photographer)</li>
+            <li><i class="fa-solid fa-check"></i> Basic Sound System</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Catering Arrangement</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Luxury Décor Items</li>
+          </ul>
+          <button class="btn btn-outline btn-block" onclick="openModal()">Get a Quote</button>
+        </div>
+
+        <!-- Premium -->
+        <div class="package-card package-card--popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="package-header">
+            <i class="fa-solid fa-crown package-icon"></i>
+            <h3>Premium</h3>
+            <div class="package-price"><span class="currency">₹</span>35,000<span class="price-unit">/event</span></div>
+            <p>Ideal for mid-size celebrations up to 300 guests.</p>
+          </div>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Grand Stage &amp; Theme Decoration</li>
+            <li><i class="fa-solid fa-check"></i> Premium Floral Arrangements</li>
+            <li><i class="fa-solid fa-check"></i> Mood &amp; Accent Lighting</li>
+            <li><i class="fa-solid fa-check"></i> Full-Day Event Coordination</li>
+            <li><i class="fa-solid fa-check"></i> Photography + Videography</li>
+            <li><i class="fa-solid fa-check"></i> Professional Sound &amp; DJ</li>
+            <li><i class="fa-solid fa-check"></i> Basic Catering Coordination</li>
+            <li><i class="fa-solid fa-check"></i> Guest Management Team</li>
+          </ul>
+          <button class="btn btn-primary btn-block" onclick="openModal()">Get a Quote</button>
+        </div>
+
+        <!-- Luxury -->
+        <div class="package-card">
+          <div class="package-header">
+            <i class="fa-solid fa-gem package-icon"></i>
+            <h3>Luxury</h3>
+            <div class="package-price"><span class="currency">₹</span>75,000<span class="price-unit">/event</span></div>
+            <p>All-inclusive grandeur for 500+ guest extravaganzas.</p>
+          </div>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Bespoke Theme &amp; Luxury Décor</li>
+            <li><i class="fa-solid fa-check"></i> Exotic Floral Installations</li>
+            <li><i class="fa-solid fa-check"></i> LED / Chandelier Lighting</li>
+            <li><i class="fa-solid fa-check"></i> Multi-Day Event Management</li>
+            <li><i class="fa-solid fa-check"></i> Cinema-Grade Photo &amp; Video</li>
+            <li><i class="fa-solid fa-check"></i> Live Band + Celebrity DJ</li>
+            <li><i class="fa-solid fa-check"></i> Full Catering &amp; Bar Setup</li>
+            <li><i class="fa-solid fa-check"></i> Valet &amp; Concierge Services</li>
+          </ul>
+          <button class="btn btn-outline btn-block" onclick="openModal()">Get a Quote</button>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <a href="#pricing" class="btn btn-primary btn-lg">View Full Pricing Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY CHOOSE US — #why-choose-us
+  ============================================================ -->
+  <section id="why-choose-us" class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Why Us</span>
+        <h2 class="section-title">Why Choose <em>Élite Events</em>?</h2>
+        <p class="section-sub">We bring passion, precision and panache to every celebration we touch.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-box" data-aos="fade-up">
+          <div class="why-icon"><i class="fa-solid fa-trophy"></i></div>
+          <h4>12+ Years Experience</h4>
+          <p>Over a decade of crafting flawless events across India, bringing expertise that shows in every detail.</p>
+        </div>
+        <div class="why-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h4>500+ Events Delivered</h4>
+          <p>From intimate family gatherings to grand corporate galas — 500+ successful events speak for themselves.</p>
+        </div>
+        <div class="why-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+          <h4>Award Winning</h4>
+          <p>Recognised by the Event Management Association of India with 15+ national and regional awards.</p>
+        </div>
+        <div class="why-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+          <h4>24/7 Support</h4>
+          <p>Our dedicated support team is available around the clock — before, during and after your event.</p>
+        </div>
+        <div class="why-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="why-icon"><i class="fa-solid fa-palette"></i></div>
+          <h4>Custom Designs</h4>
+          <p>No cookie-cutter events. Every concept, colour palette and décor element is designed exclusively for you.</p>
+        </div>
+        <div class="why-box" data-aos="fade-up" data-aos-delay="500">
+          <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
+          <h4>Luxury Vendors</h4>
+          <p>Partnerships with India's top florists, caterers, photographers and entertainment acts for unmatched quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT US — #about
+  ============================================================ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Us</span>
+        <h2 class="section-title">Our <em>Story</em></h2>
+      </div>
+
+      <!-- Story -->
+      <div class="about-story">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Élite Events Story" loading="lazy" />
+          <div class="about-img-badge">
+            <span class="badge-num">12+</span>
+            <span class="badge-label">Years of Excellence</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="about-lead">Founded in 2012, Élite Events began as a small passionate team of two in Kochi with one simple belief — every celebration deserves to be extraordinary.</p>
+          <p>Over twelve years we have grown into one of South India's most trusted event management companies, with a team of 45 professionals, a network of 200+ luxury vendors and a portfolio of 500+ breathtaking events across weddings, corporate gatherings, cultural programmes and private parties.</p>
+          <p>Our philosophy is simple: listen deeply, design boldly, execute flawlessly. We pour our hearts into understanding each client's vision and then channel our collective expertise to bring that vision to life — on time, within budget, and beyond expectation.</p>
+          <div class="about-highlights">
+            <div class="ab-highlight"><i class="fa-solid fa-check-circle"></i> ISO 9001:2015 Certified</div>
+            <div class="ab-highlight"><i class="fa-solid fa-check-circle"></i> 15+ Industry Awards</div>
+            <div class="ab-highlight"><i class="fa-solid fa-check-circle"></i> Pan-India Operations</div>
+            <div class="ab-highlight"><i class="fa-solid fa-check-circle"></i> 98% Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission & Vision -->
+      <div class="mv-grid">
+        <div class="mv-card">
+          <i class="fa-solid fa-bullseye mv-icon"></i>
+          <h3>Our Mission</h3>
+          <p>To transform every event into a masterpiece that resonates deeply with our clients and their guests — delivered with meticulous attention to detail, unwavering professionalism, and heartfelt creativity.</p>
+        </div>
+        <div class="mv-card mv-card--accent">
+          <i class="fa-solid fa-eye mv-icon"></i>
+          <h3>Our Vision</h3>
+          <p>To be India's most celebrated event management brand — synonymous with luxury, creativity and trust — setting new benchmarks for experiential events that become timeless memories.</p>
+        </div>
+        <div class="mv-card">
+          <i class="fa-solid fa-heart mv-icon"></i>
+          <h3>Our Values</h3>
+          <p>Integrity, creativity, excellence and empathy guide everything we do. We treat every client's celebration as if it were our own — with passion, dedication and an unrelenting pursuit of perfection.</p>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="team-header">
+        <h3 class="section-title" style="margin-top:3rem;">Meet Our <em>Team</em></h3>
+        <p class="section-sub">The talented people who make the magic happen.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Priya Nair" loading="lazy" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <h4>Priya Nair</h4>
+          <span>Founder &amp; CEO</span>
+          <p>With 15 years in luxury event design, Priya's visionary leadership has shaped Élite Events into an industry benchmark.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Arjun Menon" loading="lazy" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <h4>Arjun Menon</h4>
+          <span>Creative Director</span>
+          <p>Arjun translates dreams into breathtaking décor concepts, blending contemporary design with timeless elegance.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Sneha Pillai" loading="lazy" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <h4>Sneha Pillai</h4>
+          <span>Operations Manager</span>
+          <p>Sneha's precision logistics ensure every event runs like clockwork — no detail too small, no timeline too tight.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Rahul Krishna" loading="lazy" />
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <h4>Rahul Krishna</h4>
+          <span>Head of Photography</span>
+          <p>Award-winning photographer with an eye for emotion and light — Rahul ensures your memories are captured forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES — #services
+  ============================================================ -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">What We Do</span>
+        <h2 class="section-title">Our <em>Services</em></h2>
+        <p class="section-sub">From intimate soirées to grand extravaganzas — we do it all, flawlessly.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- 1. Wedding Events -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding Events" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-rings-wedding"></i></div>
+            <h3>Wedding Events</h3>
+            <p>Your dream wedding brought to life — from grand mandap setups and floral installations to bridal entrance choreography and honeymoon planning.</p>
+            <div class="service-price">Starting from <strong>₹75,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Birthday Parties -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80" alt="Birthday Parties" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-cake-candles"></i></div>
+            <h3>Birthday Parties</h3>
+            <p>Unforgettable birthday celebrations for all ages — themed décor, custom cakes, entertainment, photo booths and surprise elements that wow.</p>
+            <div class="service-price">Starting from <strong>₹15,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Engagement Ceremonies -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Engagement Ceremonies" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Engagement Ceremonies</h3>
+            <p>Celebrate the first step of your forever — elegant stage setups, intimate floral decor, ring exchange coordination and romantic ambience creation.</p>
+            <div class="service-price">Starting from <strong>₹20,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Corporate Events -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Corporate Events" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Corporate Events</h3>
+            <p>Conferences, product launches, award nights, team-building events — executed with boardroom-level precision and extraordinary production quality.</p>
+            <div class="service-price">Starting from <strong>₹50,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. College Events -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80" alt="College Events" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>College Events</h3>
+            <p>Annual days, tech fests, cultural fests and farewell parties — energetic productions with dynamic stage setups, lighting rigs and live entertainment.</p>
+            <div class="service-price">Starting from <strong>₹25,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Cultural Programs -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Cultural Programs" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-music"></i></div>
+            <h3>Cultural Programs</h3>
+            <p>Festivals, Onam celebrations, Diwali galas and classical performances — authentic cultural ambience with traditional décor, costumes and artist management.</p>
+            <div class="service-price">Starting from <strong>₹30,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Anniversary Celebrations -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80" alt="Anniversary Celebrations" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <h3>Anniversary Celebrations</h3>
+            <p>Mark years of love with a celebration worthy of your journey — surprise setups, memory walls, candle-light dinners and bespoke floral arrangements.</p>
+            <div class="service-price">Starting from <strong>₹18,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Baby Showers -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="Baby Showers" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+            <h3>Baby Showers</h3>
+            <p>Adorable, heartwarming baby shower setups with pastel-themed décor, gender-reveal elements, cute props and a joyful atmosphere for the little one's arrival.</p>
+            <div class="service-price">Starting from <strong>₹12,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Graduation Parties -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" alt="Graduation Parties" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-scroll"></i></div>
+            <h3>Graduation Parties</h3>
+            <p>Celebrate academic achievements in style — custom photo walls, themed stages, fun props and entertainment to mark this life milestone with panache.</p>
+            <div class="service-price">Starting from <strong>₹10,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. Private Parties -->
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Private Parties" loading="lazy" />
+            <div class="service-overlay">
+              <button class="btn btn-outline btn-sm" onclick="openModal()"><i class="fa-solid fa-wand-sparkles"></i> Get a Quote</button>
+            </div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-martini-glass"></i></div>
+            <h3>Private Parties</h3>
+            <p>Exclusive house parties, poolside soirées and private dining experiences — intimate luxury setups tailored to your personal style and guest list.</p>
+            <div class="service-price">Starting from <strong>₹8,000</strong></div>
+            <div class="service-actions">
+              <button class="btn btn-outline btn-sm">View Details</button>
+              <button class="btn btn-primary btn-sm" onclick="openModal()">Get a Quote</button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /services-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRICING — #pricing
+  ============================================================ -->
+  <section id="pricing" class="section pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pricing</span>
+        <h2 class="section-title">Events &amp; <em>Pricing</em></h2>
+        <p class="section-sub">Straightforward pricing with no hidden costs — choose the plan that fits your celebration.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Basic -->
+        <div class="pricing-card" id="pricing-basic">
+          <div class="pricing-tier">Basic</div>
+          <div class="pricing-amount">
+            <span class="p-currency">₹</span>15,000
+            <span class="p-unit">/ event</span>
+          </div>
+          <p class="pricing-desc">Great for intimate events up to 100 guests</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Basic Stage Decoration</li>
+            <li><i class="fa-solid fa-check"></i> Balloon &amp; Ribbon Arrangements</li>
+            <li><i class="fa-solid fa-check"></i> Basic Floral Decoration</li>
+            <li><i class="fa-solid fa-check"></i> Standard Lighting Setup</li>
+            <li><i class="fa-solid fa-check"></i> Event Coordination (4 hrs)</li>
+            <li><i class="fa-solid fa-check"></i> 1 Professional Photographer</li>
+            <li><i class="fa-solid fa-check"></i> Basic Sound System</li>
+            <li><i class="fa-solid fa-check"></i> Event Planning Consultation</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Videography</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Catering Arrangement</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Live Entertainment</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Guest Management</li>
+          </ul>
+          <button class="btn btn-outline btn-block" onclick="openModal()">Choose Basic</button>
+        </div>
+
+        <!-- Premium (highlighted) -->
+        <div class="pricing-card pricing-card--featured" id="pricing-premium">
+          <div class="pricing-popular-label">⭐ Most Popular</div>
+          <div class="pricing-tier">Premium</div>
+          <div class="pricing-amount">
+            <span class="p-currency">₹</span>35,000
+            <span class="p-unit">/ event</span>
+          </div>
+          <p class="pricing-desc">Best for mid-size celebrations up to 300 guests</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Grand Stage &amp; Theme Décor</li>
+            <li><i class="fa-solid fa-check"></i> Premium Floral Arrangements</li>
+            <li><i class="fa-solid fa-check"></i> Customised Backdrop &amp; Props</li>
+            <li><i class="fa-solid fa-check"></i> Mood &amp; Accent Lighting</li>
+            <li><i class="fa-solid fa-check"></i> Full-Day Event Coordination</li>
+            <li><i class="fa-solid fa-check"></i> Photography + Videography</li>
+            <li><i class="fa-solid fa-check"></i> Professional DJ &amp; Sound</li>
+            <li><i class="fa-solid fa-check"></i> Basic Catering Coordination</li>
+            <li><i class="fa-solid fa-check"></i> Guest Management Team</li>
+            <li><i class="fa-solid fa-check"></i> Event Planning (3 consultations)</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Live Band / Artist</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Valet Services</li>
+          </ul>
+          <button class="btn btn-primary btn-block" onclick="openModal()">Choose Premium</button>
+        </div>
+
+        <!-- Luxury -->
+        <div class="pricing-card" id="pricing-luxury">
+          <div class="pricing-tier">Luxury</div>
+          <div class="pricing-amount">
+            <span class="p-currency">₹</span>75,000
+            <span class="p-unit">/ event</span>
+          </div>
+          <p class="pricing-desc">All-inclusive grandeur for 500+ guest events</p>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Bespoke Theme &amp; Luxury Décor</li>
+            <li><i class="fa-solid fa-check"></i> Exotic Floral Installations</li>
+            <li><i class="fa-solid fa-check"></i> LED Walls &amp; Chandelier Lighting</li>
+            <li><i class="fa-solid fa-check"></i> Multi-Day Event Management</li>
+            <li><i class="fa-solid fa-check"></i> Cinema-Grade Photo &amp; Video</li>
+            <li><i class="fa-solid fa-check"></i> Live Band + Celebrity DJ</li>
+            <li><i class="fa-solid fa-check"></i> Full Catering &amp; Bar Coordination</li>
+            <li><i class="fa-solid fa-check"></i> VIP Guest Management</li>
+            <li><i class="fa-solid fa-check"></i> Valet &amp; Concierge Services</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited Planning Consultations</li>
+            <li><i class="fa-solid fa-check"></i> Live Streaming Setup</li>
+            <li><i class="fa-solid fa-check"></i> Post-Event Album &amp; Highlights Reel</li>
+          </ul>
+          <button class="btn btn-outline btn-block" onclick="openModal()">Choose Luxury</button>
+        </div>
+
+      </div><!-- /pricing-grid -->
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <h3 class="faq-title">Frequently Asked <em>Questions</em></h3>
+        <div class="faq-list" id="faqList">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How far in advance should I book?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We recommend booking at least 3–6 months in advance for weddings and large events, and 4–6 weeks for smaller gatherings. However, we do accommodate last-minute bookings subject to availability — call us and we'll do our best!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I customise a package beyond what's listed?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! All our packages are fully customisable. The listed packages are starting frameworks — we can add or remove elements, adjust guest counts, change themes, and create entirely bespoke packages tailored to your exact requirements and budget.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is your payment and cancellation policy?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We require a 25% advance to confirm the booking, 50% one month before the event, and the balance on the event day. For cancellations made more than 60 days before the event, 75% of the advance is refunded. Cancellations within 30 days are non-refundable. We always recommend event insurance for peace of mind.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you manage outdoor events?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We manage both indoor and outdoor events extensively. For outdoor events, we arrange weather-contingency marquees, appropriate flooring, generator backup, lighting rigs and all necessary permissions from local authorities.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you provide services outside Kerala?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we operate pan-India. We have coordinated destination weddings and corporate events in Goa, Mumbai, Delhi, Bangalore, Udaipur and Dubai. Travel and logistics costs are added separately for outstation events.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How many people will be on-site during my event?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our on-site team size depends on the scale of the event. For small events (up to 100 guests) we typically have 5–8 staff; for large events (500+ guests) we deploy 20–30 specialists including an event director, coordinators, décor team, AV technicians and hospitality staff.</p>
+            </div>
+          </div>
+
+        </div><!-- /faq-list -->
+      </div><!-- /faq-section -->
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY — #gallery
+  ============================================================ -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Gallery</span>
+        <h2 class="section-title">Our <em>Gallery</em></h2>
+        <p class="section-sub">A visual journey through our finest moments — browse by category.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+        <button class="filter-btn" data-filter="birthday">Birthday</button>
+        <button class="filter-btn" data-filter="stage">Stage</button>
+        <button class="filter-btn" data-filter="engagement">Engagement</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="lighting">Lighting</button>
+        <button class="filter-btn" data-filter="flowers">Flowers</button>
+        <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+      </div>
+
+      <!-- Image Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Mandap" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="birthday">
+          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80" alt="Birthday Celebration" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="stage">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Stage Setup" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="engagement">
+          <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" alt="Engagement Ceremony" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Event" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="lighting">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" alt="Lighting Setup" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="flowers">
+          <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80" alt="Floral Decoration" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="outdoor">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Outdoor Event" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Wedding Reception" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="birthday">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Kids Birthday" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="stage">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Concert Stage" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="flowers">
+          <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80" alt="White Rose Arrangement" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="lighting">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Fairy Lights" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="outdoor">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach Wedding" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Corporate Gala" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="engagement">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Ring Ceremony" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Wedding Table Décor" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="birthday">
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="Milestone Birthday" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="flowers">
+          <img src="https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&w=800&q=80" alt="Marigold Garlands" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="stage">
+          <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80" alt="LED Backdrop Stage" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="outdoor">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Outdoor Marquee" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="lighting">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Ballroom Chandelier" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80" alt="Awards Night" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+        <div class="gallery-item" data-category="engagement">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Engagement Party" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+
+      </div><!-- /gallery-grid -->
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next image">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TESTIMONIALS — #testimonials
+  ============================================================ -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Testimonials</span>
+        <h2 class="section-title">What Our <em>Clients Say</em></h2>
+        <p class="section-sub">Real words from real people whose moments we made unforgettable.</p>
+      </div>
+
+      <div class="testimonials-slider-wrapper">
+        <div class="testimonials-slider" id="testimonialsSlider">
+
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testi-quote">
+              "Élite Events made our wedding an absolute dream. Every single detail — from the stunning floral arch to the perfectly synchronised lighting transitions — was beyond what we imagined. Our guests are still talking about it months later. Priya and her team are pure magic!"
+            </blockquote>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Anjali &amp; Vikram" loading="lazy" />
+              <div>
+                <strong>Anjali &amp; Vikram Sharma</strong>
+                <span>Wedding Clients – Kochi, 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testi-quote">
+              "We hired Élite Events for our company's annual awards gala and they delivered a world-class production. The stage design, the AV quality, the seamless flow of the evening — everything was handled with incredible professionalism. I would not trust anyone else with our corporate events."
+            </blockquote>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Rajesh Menon" loading="lazy" />
+              <div>
+                <strong>Rajesh Menon</strong>
+                <span>VP Operations, TechNova Pvt. Ltd. – Corporate Gala</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testi-quote">
+              "My parents' 50th anniversary celebration was absolutely perfect. The team surprised us with a memory wall of old photographs that brought everyone to tears. The golden floral arrangements were exquisite, and the candlelight dinner setup was straight out of a fairytale. 10 out of 10!"
+            </blockquote>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Deepa Krishnan" loading="lazy" />
+              <div>
+                <strong>Deepa Krishnan</strong>
+                <span>Anniversary Client – Thrissur, 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testi-quote">
+              "We booked Élite Events for our college annual fest and the result was phenomenal. The stage design was professional-grade, the sound was crystal clear, and their team managed 2,000 students with zero hiccups. Arjun's creative inputs transformed our budget into something spectacular. Highly recommended!"
+            </blockquote>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Aditya Nambiar" loading="lazy" />
+              <div>
+                <strong>Aditya Nambiar</strong>
+                <span>Student Council President – MES College Fest</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testi-quote">
+              "I wanted a magical unicorn birthday party for my daughter and Élite Events delivered exactly that — and so much more! The décor was breathtaking, the cake was a masterpiece, and the entertainment kept all 60 kids completely enthralled. Sneha managed every little detail beautifully. We will definitely be back!"
+            </blockquote>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Supriya Iyer" loading="lazy" />
+              <div>
+                <strong>Supriya Iyer</strong>
+                <span>Birthday Party Client – Ernakulam, 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testi-quote">
+              "Our engagement ceremony was intimate but Élite Events made it feel grand. The soft pastel floral setup was exactly what we envisioned, and the team's attention to our specific traditions was touching. Rahul's photography captured emotions we didn't even know were on our faces. Pure perfection."
+            </blockquote>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Meera &amp; Siddharth" loading="lazy" />
+              <div>
+                <strong>Meera &amp; Siddharth Pillai</strong>
+                <span>Engagement Ceremony Clients – Calicut, 2023</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /testimonials-slider -->
+
+        <!-- Controls -->
+        <div class="slider-controls">
+          <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous testimonial">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="sliderDots">
+            <button class="dot active" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="dot" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="dot" data-index="2" aria-label="Go to slide 3"></button>
+            <button class="dot" data-index="3" aria-label="Go to slide 4"></button>
+            <button class="dot" data-index="4" aria-label="Go to slide 5"></button>
+            <button class="dot" data-index="5" aria-label="Go to slide 6"></button>
+          </div>
+          <button class="slider-btn slider-next" id="sliderNext" aria-label="Next testimonial">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT — #contact
+  ============================================================ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get in Touch</span>
+        <h2 class="section-title">Contact <em>Us</em></h2>
+        <p class="section-sub">Have a question or ready to plan your event? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="contact-name" name="name" placeholder="Your full name" required />
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+91 98765 43210" required />
+                <span class="form-error" id="phoneError"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-event-type">Event Type</label>
+                <select id="contact-event-type" name="eventType">
+                  <option value="" disabled selected>Select event type</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="birthday">Birthday Party</option>
+                  <option value="engagement">Engagement Ceremony</option>
+                  <option value="corporate">Corporate Event</option>
+                  <option value="college">College Event</option>
+                  <option value="cultural">Cultural Program</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="babyshower">Baby Shower</option>
+                  <option value="graduation">Graduation Party</option>
+                  <option value="private">Private Party</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-date">Event Date (Approximate)</label>
+              <input type="date" id="contact-date" name="eventDate" />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message <span class="required">*</span></label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your event — theme, venue ideas, special requirements..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <aside class="contact-info-wrap">
+          <div class="contact-info-card">
+            <h3>Reach Us Directly</h3>
+
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@eliteevents.in">hello@eliteevents.in</a>
+                <a href="mailto:bookings@eliteevents.in">bookings@eliteevents.in</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+914842345678">+91 484 234 5678</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Office Address</strong>
+                <address>
+                  Élite Events Studio, 3rd Floor,<br />
+                  Panampilly Nagar, Ernakulam,<br />
+                  Kochi – 682 036, Kerala, India
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>Office Hours</strong>
+                <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
+                <span>Sunday: 10:00 AM – 2:00 PM</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <a href="https://wa.me/919876543210?text=Hello%20Élite%20Events!%20I%20would%20like%20to%20enquire%20about%20your%20services." class="whatsapp-link" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+
+            <!-- Social Links -->
+            <div class="contact-social">
+              <a href="#" aria-label="Facebook" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" aria-label="Pinterest" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a>
+              <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Map embed placeholder -->
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.025177529874!2d76.30499351479437!3d9.981609192854736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5f6a2fd5!2sPanampilly%20Nagar%2C%20Ernakulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Élite Events Office Location">
+            </iframe>
+          </div>
+        </aside>
+
+      </div><!-- /contact-layout -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOKING / QUOTE MODAL
+  ============================================================ -->
+  <div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 id="modalTitle">✦ Request a Free Quote</h2>
+        <p>Fill in the details below and our team will reach out within 24 hours.</p>
+        <button class="modal-close" id="modalClose" onclick="closeModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="booking-form" class="booking-form" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-name">Full Name <span class="required">*</span></label>
+              <input type="text" id="booking-name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="booking-phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="booking-phone" name="phone" placeholder="+91 98765 43210" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="booking-email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="booking-event-category">Event Category <span class="required">*</span></label>
+              <select id="booking-event-category" name="eventCategory" required>
+                <option value="" disabled selected>Select event type</option>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="engagement">Engagement Ceremony</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="college">College Event</option>
+                <option value="cultural">Cultural Program</option>
+                <option value="anniversary">Anniversary Celebration</option>
+                <option value="babyshower">Baby Shower</option>
+                <option value="graduation">Graduation Party</option>
+                <option value="private">Private Party</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-date">Event Date <span class="required">*</span></label>
+              <input type="date" id="booking-date" name="eventDate" required />
+            </div>
+            <div class="form-group">
+              <label for="booking-guests">Expected Guest Count <span class="required">*</span></label>
+              <select id="booking-guests" name="guestCount" required>
+                <option value="" disabled selected>Select range</option>
+                <option value="1-50">1 – 50 Guests</option>
+                <option value="51-100">51 – 100 Guests</option>
+                <option value="101-200">101 – 200 Guests</option>
+                <option value="201-300">201 – 300 Guests</option>
+                <option value="301-500">301 – 500 Guests</option>
+                <option value="500+">500+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-package">Preferred Package</label>
+            <select id="booking-package" name="preferredPackage">
+              <option value="" disabled selected>Select a package (optional)</option>
+              <option value="basic">Basic – ₹15,000</option>
+              <option value="premium">Premium – ₹35,000</option>
+              <option value="luxury">Luxury – ₹75,000</option>
+              <option value="custom">Custom Package</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-decoration">Decoration Preferences</label>
+            <input type="text" id="booking-decoration" name="decorationPrefs" placeholder="e.g., Floral mandap, LED backdrop, Rustic theme, Pastel colours..." />
+          </div>
+
+          <div class="form-group">
+            <label for="booking-requirements">Additional Requirements</label>
+            <textarea id="booking-requirements" name="additionalRequirements" rows="4" placeholder="Tell us anything else — venue, catering needs, special requests, budget range..."></textarea>
+          </div>
+
+          <button type="submit" id="contact-submit" class="btn btn-primary btn-block btn-lg">
+            <i class="fa-solid fa-wand-sparkles"></i> Submit Enquiry
+          </button>
+
+          <p class="form-privacy">
+            <i class="fa-solid fa-lock"></i> Your information is secure and will never be shared with third parties.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand Column -->
+          <div class="footer-col footer-col--brand">
+            <a href="#home" class="footer-logo">✦ Élite Events</a>
+            <p class="footer-desc">
+              South India's most trusted premium event management company — crafting extraordinary celebrations since 2012. We bring passion, precision and panache to every event we touch.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+              <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+              <li><a href="#pricing"><i class="fa-solid fa-angle-right"></i> Events &amp; Pricing</a></li>
+              <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Gallery</a></li>
+              <li><a href="#testimonials"><i class="fa-solid fa-angle-right"></i> Testimonials</a></li>
+              <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Services Column -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Wedding Events</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Birthday Parties</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Engagement Ceremonies</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Corporate Events</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Anniversary Celebrations</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Baby Showers</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Cultural Programs</a></li>
+              <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Private Parties</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Contact Info</h4>
+            <ul class="footer-contact">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Élite Events Studio, Panampilly Nagar, Ernakulam, Kochi – 682 036, Kerala</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/919876543210" class="whatsapp-link" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:hello@eliteevents.in">hello@eliteevents.in</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Sat: 9 AM – 7 PM</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-primary btn-sm footer-quote-btn" onclick="openModal()">
+              <i class="fa-solid fa-wand-sparkles"></i> Get a Free Quote
+            </button>
+          </div>
+
+        </div><!-- /footer-grid -->
+      </div>
+    </div><!-- /footer-top -->
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footerYear"></span> Élite Events. All rights reserved. Crafted with <i class="fa-solid fa-heart" style="color:#e44d6b;"></i> in Kochi, Kerala.</p>
+        <p class="footer-legal">
+          <a href="#">Privacy Policy</a> &bull;
+          <a href="#">Terms of Service</a> &bull;
+          <a href="#">Sitemap</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       PROJECT JS
+  ============================================================ -->
+  <script src="main.js"></script>
+  <script src="gallery.js"></script>
+  <script src="pricing.js"></script>
+  <script src="forms.js"></script>
+
+  <!-- Inline bootstrap JS (modal open/close, footer year) so the page
+       works even before the external JS files are written -->
+  <script>
+    // ── Footer year ──────────────────────────────────────────
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // ── Modal helpers ────────────────────────────────────────
+    function openModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('modal--open');
+      document.body.classList.add('no-scroll');
+    }
+    function closeModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('modal--open');
+      document.body.classList.remove('no-scroll');
+    }
+    // Close modal on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>
